@@ -102,46 +102,62 @@ class Student:
         print('You haven\'t borrowed that book, try another...')
 
 
-def create_lib():
-    library = Library({})
-    library.load_state()
+import sys
 
-    student_name = input("Enter your name: ")
-    student_example = Student(student_name, library)
-
-    while True:
-        print('''
+def display_menu():
+    """ Displays the library menu."""
+    print('''
         ==========LIBRARY MENU===========
         1. Display Available Books
         2. Borrow a Book
         3. Return a Book
         4. View Your Books
         5. Search for a Book
-        6. Exit'''
-        )
+        6. Exit
+    ''')
 
+def get_user_choice():
+    """ Gets user input and ensures it's valid."""
+    while True:
         choice = input('Enter Choice (or press q to quit): ').lower()
-        if choice == '1':
-            print()
-            library.show_avail_books()
-        elif choice == '2':
-            print()
-            student_example.request_book()
-        elif choice == '3':
-            print()
-            student_example.return_book()
-        elif choice == '4':
-            print()
-            student_example.view_borrowed()
-        elif choice == '5':
-            keyword = input('Enter the keyword to search for a book >> ')
-            library.search_books(keyword)
-        elif choice == '6' or choice == 'q':
-            print('Saving state and exiting...')
-            library.save_state()
-            exit()
+        if choice in {'1', '2', '3', '4', '5', '6', 'q'}:
+            return choice
         else:
             print('Invalid choice, please try again.')
+
+def handle_exit(library):
+    """ Handles the process of exiting the system."""
+    print('Saving state and exiting...')
+    library.save_state()
+    sys.exit()
+
+def create_lib():
+    library = Library({})
+    library.load_state()
+
+    student_name = input("Enter your name: ")
+    student = Student(student_name, library)
+
+    # Dictionary to map user choices to corresponding functions
+    menu_actions = {
+        '1': library.show_avail_books,
+        '2': student.request_book,
+        '3': student.return_book,
+        '4': student.view_borrowed,
+        '5': lambda: library.search_books(input('Enter the keyword to search for a book >> ')),
+        '6': lambda: handle_exit(library),
+        'q': lambda: handle_exit(library)
+    }
+
+    # Main loop for user interactions
+    while True:
+        display_menu()
+        choice = get_user_choice()
+
+        # Call the corresponding function from the menu_actions dictionary
+        action = menu_actions.get(choice)
+        if action:
+            action()  # Perform the action corresponding to the user's choice
 
 
 if __name__ == '__main__':
