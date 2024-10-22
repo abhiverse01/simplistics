@@ -1,7 +1,7 @@
 
-# Simplistics Repository by Abhishek Shah
+# Simplistics - by Abhishek Shah
 
-Welcome to the **Simplistics Repository**, a collection of simple yet practical Python-based projects I have worked on to practice and enhance my programming skills. These projects are aimed at providing solutions to common tasks and games, focusing on simplicity, functionality, and code readability. All the projects were practiced using the **hackr.io** website and serve as learning tools for anyone interested in Python.
+Welcome to the **Simplistics Repository**, a collection of simple yet practical Python-based projects I have worked on to practice and enhance my programming skills. These projects aim to provide solutions to common tasks and games, focusing on simplicity, functionality, and code readability. All the projects were practiced using the **hackr.io** website and served as learning tools for anyone interested in Python.
 
 ## 🚀 Goal of the Repository
 The primary goal of this repository is to showcase various beginner-to-intermediate level Python projects that solve different real-world problems, automate tasks, and build basic games. Each project is self-contained, well-structured, and written in Python with a focus on understanding core programming concepts like:
@@ -18,7 +18,7 @@ This repository serves as a reference for beginners looking to practice Python o
 ## 📝 List of Projects
 
 1. **Password Strength Checker**  
-   A tool to check the strength of a password by analyzing various factors like the presence of uppercase letters, lowercase letters, digits, and special characters. Provides feedback to users about the strength of their password.
+   A tool to check a password's strength by analysing factors like uppercase letters, lowercase letters, digits, and special characters. Provides feedback to users about the strength of their password.
 
 2. **Library Manager**  
    A simple library management system where users can borrow and return books. The program tracks available books and allows users to search for books and view their borrowed list.
@@ -33,7 +33,7 @@ This repository serves as a reference for beginners looking to practice Python o
    A GUI version of the popular Hangman game built using the Tkinter library. Players guess letters to complete a word before running out of attempts.
 
 6. **Tkinter-based Text Editor**  
-   A simple text editor with basic functionality like opening, editing, and saving text files, implemented using Tkinter. It mimics the functionality of a basic notepad.
+   A simple text editor with basic functionality like opening, editing, and saving text files, is implemented using Tkinter. It mimics the functionality of a basic notepad.
 
 7. **Password Generator**  
    A random password generator that creates strong, unique passwords based on user-defined length and character sets, ensuring enhanced security.
@@ -48,7 +48,7 @@ This repository serves as a reference for beginners looking to practice Python o
    A program that allows users to solve Sudoku puzzles by implementing a backtracking algorithm, helping users find solutions to any valid Sudoku board.
 
 ## 📂 Folder Structure
-Each project is contained within its own directory, with a self-explanatory structure:
+Each project is contained within its directory, with a self-explanatory structure:
 ```
 /simplistics_repository/
 │
