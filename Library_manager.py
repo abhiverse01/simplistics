@@ -4,6 +4,7 @@ Library Manager
 '''
 
 import json
+import sys
 from datetime import datetime
 
 class Library:
@@ -101,8 +102,6 @@ class Student:
                 return
         print('You haven\'t borrowed that book, try another...')
 
-
-import sys
 
 def display_menu():
     """ Displays the library menu."""
